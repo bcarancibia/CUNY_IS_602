@@ -11,11 +11,12 @@
 
 #import packages and modules
 import re
-from Tkinter import *
+import Tkinter
 import tkFileDialog
 from operator import attregetter
 import csv
 import os
+
 
 
 
@@ -99,7 +100,7 @@ def car_evaluation_save(text):
         file_out.close()
     except IOError:
         print "No file selected to save to"
-        qui()
+        quit()
 
 
 
