@@ -13,7 +13,7 @@
 import re
 import Tkinter
 import tkFileDialog
-from operator import attregetter
+from operator import attrgetter
 import csv
 import os
 
@@ -54,14 +54,14 @@ class car_evaluation(object):
             self.lugboot_ord = None
             self.safety_ord = None
             self.carclass_ord = None
-            print 'The line %s, %s, %s, %s, %s, %s, %s contains errors' % (price, maint, doors, seats, cargo, safety, value)
+            print 'The line %s, %s, %s, %s, %s, %s, %s contains errors' % (Buying, Maint, Doors, Persons, LugBoot, Safety, CarClass)
             pass
 
 
 #import dialogue box from tkinter
 
 def open_csv():
-    root = Tkinter.tk()
+    root = Tkinter.Tk()
     open_file = tkFileDialog.askopenfile(mode='r')
     try:
         list_cars = []
@@ -108,11 +108,10 @@ def car_evaluation_save(text):
 #parameter cars is cars from file
 #value is all listed in .self above
 #order is ascending or descending
-def sorted_cars_params(list_cars, value, sorted_type):
-    if sorted_type == "asc":
-        return sorted(list_cars, key=attregetter(value+'_sorted_type'))
-    elif sorted_type == "desc":
-        return sorted(list_cars, key=attrgetter(value+'_sorted_type'), reverse=True)
+def sorted_cars_params(list_cars, value, order='desc'):
+     if order == 'asc':
+        return sorted(list_cars, key=attrgetter(value+'_order'))
+        return sorted(list_cars, key=attrgetter(value+'_order'), reverse=True)
 
 
 

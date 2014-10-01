@@ -13,7 +13,7 @@
 import re
 import Tkinter
 import tkFileDialog
-from operator import attregetter
+from operator import attrgetter
 import csv
 import os
 

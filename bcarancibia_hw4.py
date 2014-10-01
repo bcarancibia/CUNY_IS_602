@@ -28,7 +28,7 @@ if __name__ == "__main__":
     alchemyapi = AlchemyAPI()
     response = alchemyapi.keywords("text", allimportanttext)
 
-    print('')
+    
     print('Top 10 Keywords')
 
     #results
