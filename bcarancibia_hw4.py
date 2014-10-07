@@ -1,8 +1,10 @@
 __author__ = 'bcarancibia'
 
+import sys
+import os
 from bs4 import BeautifulSoup
 import urllib
-from alchemyapi import AlchemyAPI
+import alchemyapi
 
 
 #begin exercise
@@ -39,7 +41,9 @@ if __name__ == "__main__":
         print('relevance: ', keyword['relevance'].encode('ascii', 'ignore'))
         print('')
         index = index+1
+        
 
 
 
-	
+
+
