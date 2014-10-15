@@ -53,7 +53,7 @@ what would cause that?
 
 if __name__ == "__main__":
     import timeit as ti
-    print "Using ten iterations for each\n\n"
+    print "Using 100 iterations for each\n\n"
     #print "Sort with loops: " + str(ti.timeit("sortwithloops()", setup="from __main__ import sortwithloops", number=100))
     print "Sort without loops: " + str(ti.timeit("sortwithoutloops()", setup="from __main__ import sortwithoutloops", number=100))
     print "Sort with numpy: " + str(ti.timeit("numpySort()", "from __main__ import numpySort", number=100))
