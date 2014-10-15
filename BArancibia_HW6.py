@@ -43,15 +43,20 @@ def searchwithoutloops():
 #numpy search
 def numpySearch():
     return random.R in np.array(R)
+    
+'''
+if you look at my results you see my numpy search is pretty significantly slower than my search without loops.
+what would cause that?
+'''
 
 
 
 if __name__ == "__main__":
     import timeit as ti
     print "Using ten iterations for each\n\n"
-    #print "Sort with loops: " + str(ti.timeit("sortwithloops()", setup="from __main__ import sortwithloops", number=10))
-    print "Sort without loops: " + str(ti.timeit("sortwithoutloops()", setup="from __main__ import sortwithoutloops", number=10))
-    print "Sort with numpy: " + str(ti.timeit("numpySort()", "from __main__ import numpySort", number=10))
-    print "Search with loops: " + str(ti.timeit("searchwithloops()", setup="from __main__ import searchwithloops", number=10))
-    print "Search without loops: " + str(ti.timeit("searchwithoutloops()", setup="from __main__ import searchwithoutloops", number=10))
-    print "Search with numpy: " + str(ti.timeit("numpySearch()", setup="from __main__ import numpySearch", number=10))
+    #print "Sort with loops: " + str(ti.timeit("sortwithloops()", setup="from __main__ import sortwithloops", number=100))
+    print "Sort without loops: " + str(ti.timeit("sortwithoutloops()", setup="from __main__ import sortwithoutloops", number=100))
+    print "Sort with numpy: " + str(ti.timeit("numpySort()", "from __main__ import numpySort", number=100))
+    print "Search with loops: " + str(ti.timeit("searchwithloops()", setup="from __main__ import searchwithloops", number=100))
+    print "Search without loops: " + str(ti.timeit("searchwithoutloops()", setup="from __main__ import searchwithoutloops", number=100))
+    print "Search with numpy: " + str(ti.timeit("numpySearch()", setup="from __main__ import numpySearch", number=100))
