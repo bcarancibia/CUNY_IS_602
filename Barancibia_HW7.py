@@ -81,9 +81,13 @@ def original():
 
     print "body = " + str(slope) + " x(brain) + " + str(constant)
 
+'''
+I get different answers and I am not sure why......
+'''
+
 
 if __name__ == "__main__":
     import timeit as ti
-    print "5 iterations to test speed\n\n"
-    print "Scipy: " + str(ti.timeit("scipy()", setup="from __main__ import scipy", number=5))
-    print "Original: " + str(ti.timeit("original()", "from __main__ import original", number=5))
+    print "Twenty Five iterations to test speed\n\n"
+    print "Scipy: " + str(ti.timeit("scipy()", setup="from __main__ import scipy", number=25))
+    print "Original: " + str(ti.timeit("original()", "from __main__ import original", number=25))
