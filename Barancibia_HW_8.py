@@ -14,19 +14,18 @@ for i in range(len(images)):
     print images[i][0:-4]
     raw = misc.imread(dir + images[i])
     
-    img = ndimage.gaussian_filter(raw, 2) #gaussian http://en.wikipedia.org/wiki/Gaussian_filter
+    img = ndimage.gaussian_filter(raw, 2) 
+    #gaussian http://en.wikipedia.org/wiki/Gaussian_filter
     #http://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.ndimage.filters.gaussian_filter.html
     thresh = img > img.mean()
     
-    # count
     lbls = ndimage.label(thresh)
     nrobj = lbls[1]
-    print "Object count: " + str(nrobj)
+    print "Object count: " + str(nrobj) #count
 
     
-    # centers
-    centers = ndimage.center_of_mass(thresh, lbls[0], np.arange(1, nrobj + 1, 1))
+    centers = ndimage.center_of_mass(thresh, lbls[0], np.arange(1, nrobj + 1, 1)) #centers
     for j in range(len(centers)):
-        print "Object number" + str(j+1) + "'center:"
+        print "Object number" + str(j+1) + "center:"
         print "x = " + str(centers[j][0])
         print "y = " + str(centers[j][1])
