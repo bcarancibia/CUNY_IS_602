@@ -26,6 +26,6 @@ for i in range(len(images)):
     
     centers = ndimage.center_of_mass(thresh, lbls[0], np.arange(1, nrobj + 1, 1)) #centers
     for j in range(len(centers)):
-        print "Object number" + str(j+1) + "center:"
+        print "Object number" + str(j+1) + "center:" #print
         print "x = " + str(centers[j][0])
         print "y = " + str(centers[j][1])
