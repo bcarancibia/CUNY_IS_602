@@ -50,13 +50,13 @@ gifsMost = gifs['request'].value_counts().index[0]
 
 ##### 5 #####
 replies = epa_http['reply-code'].unique()
-repNotTwoHundo = replies[replies != '200']
+exclude_two_hundred = replies[replies != '200']
 
 ##### Output #####
 # 1
 print '*' *25
 print '#1'
-print 'Most requests made by: '
+print 'Most requests: '
 print hostrequestsmost
 print '*' *25
 # 2
@@ -68,7 +68,7 @@ print sortedbytes[0]
 print '*' *25
 # 3
 print '#3'
-print 'Busiest hour: '
+print 'Most active hour: '
 print busiestHour
 print '*' *25
 # 4
@@ -78,6 +78,6 @@ print gifsMost
 print '*' *25
 # 5
 print '#5'
-print 'HTTP Reply codes other than 200: '
-print repNotTwoHundo
+print 'HTTP Reply codes excluding 200: '
+print exclude_two_hundred
 print '*' *25
