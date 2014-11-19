@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import scipy
 import scipy.ndimage as ndimage
 import scipy.misc as misc
 import numpy as np
