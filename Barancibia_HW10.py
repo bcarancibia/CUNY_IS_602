@@ -15,14 +15,14 @@ fig = plt.figure()
 
 ##### Buying ######
 counter = Counter(cars['buying'])
-buying_names = counter.keys()
-buying_counts = counter.values()
-b_indexes = np.arange(len(buying_names))
+b_names = counter.keys()
+b_counts = counter.values()
+b_indexes = np.arange(len(b_names))
 
 ax1 = fig.add_subplot(221)
-ax1.bar(b_indexes, buying_counts, 1)
+ax1.bar(b_indexes, b_counts, 1)
 ax1.set_xticks(b_indexes + 0.5)
-ax1.set_xticklabels(buying_names)
+ax1.set_xticklabels(b_names)
 
 ##### Maintenance #####
 counter = Counter(cars['maint'])
@@ -79,7 +79,7 @@ thresh = img > img.mean()
 # Using labels to count the objects
 lbls = ndimage.label(thresh)
 nrObj = lbls[1]
-print "Object count: " + str(nrObj)
+print "obj count: " + str(nrObj)
 print "\n"
 
 # Finding the centers using center of mass
